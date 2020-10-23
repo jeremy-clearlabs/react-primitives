@@ -11,4 +11,4 @@ export const withBackground = () => (
   <Button bg="palegoldenrod">Hello world</Button>
 );
 
-export const withBackground2 = () => <Button bg="green">Hello world2</Button>;
+export const disabled = () => <Button disabled>Disabled Button</Button>;
