@@ -1,0 +1,26 @@
+{
+  "name": "react-primitives",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jeremy Wong <jermspeaks@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-essentials": "^6.0.26",
+    "@storybook/addons": "^6.0.26",
+    "@storybook/react": "^6.0.26",
+    "@types/react": "^16.9.53",
+    "babel-core": "^6.26.3",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006 -c .storybook --no-dll"
+  },
+  "resolutions": {
+    "react": "17.0.0",
+    "react-dom": "17.0.0"
+  }
+}

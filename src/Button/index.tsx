@@ -1,0 +1,32 @@
+import * as React from 'react';
+import './index.css';
+
+export interface ButtonProps {
+  /** this dictates what the button will say  */
+  children: React.ReactNode;
+  /** this dictates what the button will do  */
+  onClick: () => void;
+  /**
+   * Disables onclick
+   *
+   * @default false
+   **/
+  disabled?: boolean;
+}
+
+const noop = () => {};
+export const Button = (props: ButtonProps) => {
+  const { children, onClick, disabled = false } = props;
+  const disabledclass = disabled ? 'Button_disabled' : '';
+
+  return (
+    <div
+      className={`Button ${disabledclass}`}
+      onClick={!disabled ? onClick : noop}
+    >
+      <span>{children}</span>
+    </div>
+  );
+};
+
+export default Button;
