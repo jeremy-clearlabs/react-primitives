@@ -107,13 +107,13 @@ const StyledInput = styled.input`
   }
 `;
 
-interface CheckboxProps {
+export interface CheckboxProps {
   checked: boolean;
   indeterminate: boolean;
   subtype: string;
 }
 
-const Checkbox: React.FC<CheckboxProps> = ({ checked, indeterminate, subtype, ...props }: CheckboxProps) => {
+export const Checkbox: React.FC<CheckboxProps> = ({ checked, indeterminate, subtype, ...props }: CheckboxProps) => {
   const ref = useRef<HTMLInputElement>();
   const previousIndeterminate = usePrevious(indeterminate);
   const previousChecked = usePrevious(checked);
