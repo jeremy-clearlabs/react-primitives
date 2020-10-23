@@ -1,10 +1,15 @@
 {
   "name": "react-primitives",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "author": "Jeremy Wong <jermspeaks@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-url": "^5.0.1",
     "@storybook/addon-essentials": "^6.0.26",
     "@storybook/addons": "^6.0.26",
     "@storybook/react": "^6.0.26",
@@ -13,11 +18,17 @@
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
     "babel-core": "^6.26.3",
+    "babel-preset-react-app": "^10.0.0",
     "eslint": "^7.11.0",
     "eslint-config-prettier": "^6.14.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
     "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.32.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.28.0",
     "typescript": "^4.0.3"
   },
   "dependencies": {
@@ -29,6 +40,8 @@
   "scripts": {
     "start": "yarn storybook",
     "storybook": "start-storybook -p 6006 -c .storybook --no-dll",
+    "build": "rimraf dist && NODE_ENV=production BABEL_ENV=production rollup -c",
+    "build:watch": "rollup -c -w",
     "test": "jest"
   },
   "resolutions": {
