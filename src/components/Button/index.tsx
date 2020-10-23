@@ -1,6 +1,8 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 
+import { noop } from '../../utils/noop';
+
 const StyledButton = styled.button`
   padding: 0px 20px;
   height: 49px;
@@ -43,16 +45,9 @@ export interface ButtonProps {
   disabled?: boolean;
 }
 
-const noop = () => {};
-export const Button = (props: ButtonProps) => {
-  const { children, onClick, disabled = false } = props;
-  const disabledclass = disabled ? 'Button_disabled' : '';
-
+export const Button: React.FC<ButtonProps> = ({ children, onClick, disabled }: ButtonProps) => {
   return (
-    <StyledButton
-      disabled={disabled}
-      onClick={!disabled ? onClick : noop}
-    >
+    <StyledButton disabled={disabled} onClick={!disabled ? onClick : noop}>
       <span>{children}</span>
     </StyledButton>
   );
