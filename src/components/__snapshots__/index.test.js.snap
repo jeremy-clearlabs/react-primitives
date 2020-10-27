@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Button Default Story 1`] = `
+<button
+  className="sc-bdnylx hdrhwD"
+>
+  <span>
+    Default Background
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Button Disabled 1`] = `
+<button
+  className="sc-bdnylx kcAIQv"
+  disabled={true}
+  onClick={[Function]}
+>
+  <span>
+    Disabled Button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Checkbox default 1`] = `
+<div
+  className="sc-gtssRu fhpWRL"
+>
+  <input
+    className="sc-dlnjPT dnDREv"
+    type="checkbox"
+  />
+  <div />
+</div>
+`;
+
+exports[`Storyshots Components/Checkbox normal checkbox -- checked 1`] = `
+<input
+  checked={true}
+  type="checkbox"
+/>
+`;
+
+exports[`Storyshots Components/Checkbox normal checkbox 1`] = `
+<input
+  type="checkbox"
+/>
+`;
+
+exports[`Storyshots Components/Checkbox type checkbox - checked 1`] = `
+<div
+  className="sc-gtssRu fhpWRL"
+>
+  <input
+    className="sc-dlnjPT dnDREv"
+    type="checkbox"
+  />
+  <div />
+</div>
+`;
+
+exports[`Storyshots Components/Checkbox type checkbox - indeterminate 1`] = `
+<div
+  className="sc-gtssRu fhpWRL"
+>
+  <input
+    className="sc-dlnjPT dnDREv"
+    type="checkbox"
+  />
+  <div />
+</div>
+`;
